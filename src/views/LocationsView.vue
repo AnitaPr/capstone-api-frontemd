@@ -53,4 +53,8 @@ export default {
   </div>
 </template>
 
-<style></style>
+<style>
+.card {
+  width: 20rem;
+}
+</style>
