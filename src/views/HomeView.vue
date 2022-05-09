@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <HelloWorld msg="Welcome to Neverland" />
-    <h2>{{ "Your Ultimate Giude to Fun" }}</h2>
+    <h2>{{ "Your Ultimate Guide to Fun" }}</h2>
   </div>
 </template>
 
