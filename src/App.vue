@@ -34,7 +34,7 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
-  <router-view />
+
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
@@ -65,6 +65,7 @@
     </div>
   </header>
   <!-- End Header -->
+  <router-view />
 </template>
 
 <style></style>
