@@ -68,4 +68,8 @@
   <router-view />
 </template>
 
-<style></style>
+<style>
+body {
+  background-image: url("/Users/anitabllaca/Actualize/capstone-api-frontend/src/assets/back cover.jpeg");
+}
+</style>
