@@ -1,34 +1,35 @@
 <template>
   <!-- <div class="home"> -->
-  <h2>{{ "Your Ultimate Guide to Fun" }}</h2>
   <div id="main">
-    <div id="map"></div>
-    <!-- <div>
-      <div class="input-group md-form form-sm form-1 pl-0">
-        <div class="input-group-prepend">
-          <span class="input-group-text purple lighten-3" id="basic-text1">
-            <mdbIcon icon="search" />
-          </span>
-        </div>
-        <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search" />
+    <div class="row">
+      <div class="col">
+        <div id="map"></div>
       </div>
-      <div class="input-group md-form form-sm form-1 pl-0">
-        <div class="input-group-prepend">
-          <span class="input-group-text cyan lighten-2" id="basic-text1">
-            <mdbIcon icon="search" />
-          </span>
+      <div class="col">
+        <!-- <div class="searchbar" style="position: relative"> -->
+        <div id="sb-search" class="sb-search" style="float: left">
+          <form class="example">
+            <input type="text" v-model="searchText" placeholder="Search.." name="search" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+          <!-- |
+          <form class="example" action="action_page.php">
+            <input type="text" placeholder="Search.." name="search" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+          |
+          <form class="example" action="action_page.php">
+            <input type="text" placeholder="Search.." name="search" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form> -->
         </div>
-        <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search" />
-      </div>
-      <div class="input-group md-form form-sm form-1 pl-0">
-        <div class="input-group-prepend">
-          <span class="input-group-text pink lighten-3" id="basic-text1">
-            <mdbIcon icon="search" />
-          </span>
+        <div>
+          <!-- <div v-for="place in places" v-bind:key="place.id">
+            <h2>{{ place.description }}</h2>
+          </div> -->
         </div>
-        <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search" />
       </div>
-    </div> -->
+    </div>
 
     <!-- ======= Hero Slider Section ======= -->
     <section id="hero-slider" class="hero-slider">
@@ -39,22 +40,9 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <a
-                    href="/single-post.html"
-                    class="img-bg d-flex align-items-end"
-                    style="background-image: url('src/assets/img/resorts.jpg')"
-                  >
-                    <div class="img-bg-inner">
-                      <h2>Resorts</h2>
-                      <p>A vacation to remember</p>
-                    </div>
-                  </a>
-                </div>
-
-                <div class="swiper-slide">
-                  <a
                     href="single-post.html"
                     class="img-bg d-flex align-items-end"
-                    style="background-image: url('assets/img/best resort.jpeg')"
+                    style="background-image: url('/assets/img/disney-s-animal-kingdom.jpeg')"
                   >
                     <div class="img-bg-inner">
                       <h2>The Most Rated Kid Friendly Resort in the US</h2>
@@ -91,15 +79,35 @@
                   <a
                     href="single-post.html"
                     class="img-bg d-flex align-items-end"
-                    style="background-image: url('assets/img/post-slide-4.jpg')"
+                    style="background-image: url('/assets/img/Road-Trips-with-Kids.jpeg')"
                   >
                     <div class="img-bg-inner">
-                      <h2>9 Half-up/half-down Hairstyles for Long and Medium Hair</h2>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem neque est mollitia! Beatae
-                        minima assumenda repellat harum vero, officiis ipsam magnam obcaecati cumque maxime inventore
-                        repudiandae quidem necessitatibus rem atque.
-                      </p>
+                      <h2>Best Car Travel Toys for Toddlers</h2>
+                      <p></p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a
+                    href="single-post.html"
+                    class="img-bg d-flex align-items-end"
+                    style="background-image: url('/assets/img/best museum.png')"
+                  >
+                    <div class="img-bg-inner">
+                      <h2>The 15 Best Children's Museums in the US</h2>
+                      <p></p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a
+                    href="single-post.html"
+                    class="img-bg d-flex align-items-end"
+                    style="background-image: url('/assets/img/amusement park.jpeg')"
+                  >
+                    <div class="img-bg-inner">
+                      <h2>Toddler-Friendly Theme Parks</h2>
+                      <p></p>
                     </div>
                   </a>
                 </div>
@@ -125,7 +133,9 @@
         <div class="row g-5">
           <div class="col-lg-4">
             <div class="post-entry-1 lg">
-              <a href="single-post.html"><img src="/assets/img/best resort.jpeg" alt="" class="img-fluid" /></a>
+              <a href="single-post.html">
+                <img src="/assets/img/disney-s-animal-kingdom.jpeg" alt="" class="img-fluid" />
+              </a>
               <div class="post-meta">
                 <span class="date"></span>
                 <span class="mx-2">&bullet;</span>
@@ -140,7 +150,7 @@
               </p>
 
               <div class="d-flex align-items-center author">
-                <div class="photo"><img src="/assets/img/best resort.jpeg" alt="" class="img-fluid" /></div>
+                <div class="photo"><img src="" alt="" class="img-fluid" /></div>
                 <div class="name">
                   <h3 class="m-0 p-0"></h3>
                 </div>
@@ -164,40 +174,40 @@
                 </div>
                 <div class="post-entry-1">
                   <a href="single-post.html">
-                    <img src="assets/img/post-landscape-5.jpg" alt="" class="img-fluid" />
+                    <img src="/assets/img/Road-Trips-with-Kids.jpeg" alt="" class="img-fluid" />
                   </a>
                   <div class="post-meta">
-                    <span class="date">Food</span>
+                    <span class="date"></span>
                     <span class="mx-1">&bullet;</span>
                     <span>Jul 17th '22</span>
                   </div>
                   <h2>
-                    <a href="single-post.html">How to Avoid Distraction and Stay Focused During Video Calls?</a>
+                    <a href="single-post.html">Best Car Travel Toys for Toddlers</a>
                   </h2>
                 </div>
               </div>
               <div class="col-lg-4 border-start custom-border">
                 <div class="post-entry-1">
                   <a href="single-post.html">
-                    <img src="assets/img/post-landscape-3.jpg" alt="" class="img-fluid" />
+                    <img src="/assets/img/best museum.png" alt="" class="img-fluid" />
                   </a>
                   <div class="post-meta">
-                    <span class="date">Business</span>
+                    <span class="date"></span>
                     <span class="mx-1">&bullet;</span>
                     <span>Jul 5th '22</span>
                   </div>
-                  <h2><a href="single-post.html">6 Easy Steps To Create Your Own Cute Merch For Instagram</a></h2>
+                  <h2><a href="single-post.html">The 15 Best Children's Museums in the US</a></h2>
                 </div>
                 <div class="post-entry-1">
                   <a href="single-post.html">
-                    <img src="assets/img/post-landscape-6.jpg" alt="" class="img-fluid" />
+                    <img src="/assets/img/amusement park.jpeg" alt="" class="img-fluid" />
                   </a>
                   <div class="post-meta">
-                    <span class="date">Tech</span>
+                    <span class="date"></span>
                     <span class="mx-1">&bullet;</span>
                     <span>Mar 1st '22</span>
                   </div>
-                  <h2><a href="single-post.html">10 Life-Changing Hacks Every Working Mom Should Know</a></h2>
+                  <h2><a href="single-post.html">Toddler-Friendly Theme Parks</a></h2>
                 </div>
               </div>
             </div>
@@ -215,29 +225,66 @@
 <script>
 // @ is an alias to /src
 /* global mapboxgl */
-// import mdbIcon from "mdbvue";
+import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
+import axios from "axios";
 
 export default {
   name: "HomeView",
-  // components: {
-  //   mdbIcon,
 
   data: function () {
     return {
       places: [],
+      locations: [],
+      searchText: "",
     };
+  },
+  watch: {
+    searchText(val) {
+      console.log(val);
+      if (val == "") {
+        this.getPlaces();
+      } else {
+        this.places = this.places.filter((place) => {
+          var lowercaseTitle = place.description.toLowerCase();
+          var lowercaseSearchText = this.searchText.toLowerCase();
+          return lowercaseTitle.includes(lowercaseSearchText);
+        });
+      }
+      this.setMap();
+    },
   },
   mounted: function () {
     this.getPlaces();
+    this.indexLocations();
   },
   methods: {
+    filterLocations() {
+      return this.locations.filter((location) => {
+        var lowercaseName = location.name.toLowerCase();
+        var lowercaseSearchText = this.searchText.toLowerCase();
+        return lowercaseName.includes(lowercaseSearchText);
+      });
+    },
+    indexLocations: function () {
+      axios.get("/locations").then((response) => {
+        this.locations = response.data;
+        console.log(this.locations);
+      });
+    },
     getPlaces() {
-      // make axios
-      this.places = [
-        { lat: 40.73061, lng: -73.935242, description: "A place in USA" },
-        { lat: 40.73061, lng: -73.935242, description: "The main city!" },
-      ];
-      this.setMap();
+      axios.get("/map").then((response) => {
+        var data = response.data.data;
+        // loop through the returned places to create the map markers! Create a NEW ARRAY that is specific to the mapbox api
+        data.forEach((place) => {
+          this.places.push({
+            lat: place.geoCode.latitude,
+            lng: place.geoCode.longitude,
+            description: place.name,
+            type: place.category.toLowerCase(),
+          });
+        });
+        this.setMap();
+      });
     },
     setMap() {
       mapboxgl.accessToken = process.env.VUE_APP_MAP_KEY;
@@ -249,12 +296,19 @@ export default {
       });
       this.places.forEach((place) => {
         // create the popup
-        const popup = new mapboxgl.Popup({ offset: 25 }).setText("American Museum of Natural History");
+        const popup = new mapboxgl.Popup({ offset: 25 }).setText(place.description);
 
         // Create a default Marker and add it to the map.
         const marker1 = new mapboxgl.Marker().setLngLat([place.lng, place.lat]).setPopup(popup).addTo(map);
         console.log(map, marker1);
       });
+      // Add the control to the map.
+      map.addControl(
+        new MapboxGeocoder({
+          accessToken: mapboxgl.accessToken,
+          mapboxgl: mapboxgl,
+        })
+      );
     },
   },
 };
@@ -280,9 +334,41 @@ body {
 .mapboxgl-popup {
   max-width: 200px;
 }
-.input-group.md-form.form-sm.form-1 input {
-  border: 1px solid #bdbdbd;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+ {
+  box-sizing: border-box;
+}
+
+/* Style the search field */
+form.example input[type="text"] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 50%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 10%;
+  padding: 10px;
+  background: #008000;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 </style>
