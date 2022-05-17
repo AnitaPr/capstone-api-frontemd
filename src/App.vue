@@ -51,20 +51,7 @@
                 <i class="bi bi-chevron-down dropdown-indicator"></i>
               </a>
               <ul>
-                <!-- <li><a href="search-result.html">Search Result</a></li>
-              <li><a href="#">Drop Down 1</a></li> -->
-                <li class="dropdown">
-                  <!-- <a href="#">
-                  <span>Deep Drop Down</span>
-                  <i class="bi bi-chevron-down dropdown-indicator"></i>
-                </a> -->
-                  <!-- <ul>
-                  <li><a href="#">Hotels</a></li>
-                  <li><a href="#">Museums</a></li>
-                  <li><a href="#">Restaurants</a></li>
-                  <li><a href="#">Pools</a></li>
-                </ul> -->
-                </li>
+                <li class="dropdown"></li>
                 <li><a href="/location/1">Hotels</a></li>
                 <li><a href="/location/3">Museums</a></li>
                 <li><a href="/location/4">Restaurants</a></li>
@@ -73,18 +60,15 @@
             </li>
             <li><a href="/login">Login</a></li>
             <li><a href="/signup">Signup</a></li>
-
-            <!-- <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li> -->
           </ul>
         </nav>
         <!-- .navbar -->
 
         <div class="position-relative">
           <!-- <a href="#" class="mx-2"><span class="bi-facebook"></span></a>
-        <a href="#" class="mx-2"><span class="bi-twitter"></span></a>
-        <a href="#" class="mx-2"><span class="bi-instagram"></span></a> -->
-
+          <a href="#" class="mx-2"><span class="bi-twitter"></span></a>
+          <a href="#" class="mx-2"><span class="bi-instagram"></span></a>
+ -->
           <a href="#" class="mx-2 js-search-open"><span class="bi-search"></span></a>
           <i class="bi bi-list mobile-nav-toggle"></i>
 

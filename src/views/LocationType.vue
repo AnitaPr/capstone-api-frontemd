@@ -4,6 +4,7 @@ export default {
   data: function () {
     return {
       locations: [],
+      myRating: 0,
     };
   },
   created: function () {
@@ -18,14 +19,16 @@ export default {
         this.locations = response.data;
       });
     },
-    createRating: function (location, rating) {
+    createRating: function (location) {
+      console.log(location, this.myRating);
       let user_rating = {
         location_id: location.id,
-        rating: rating,
+        rating: this.myRating,
       };
 
       axios.post("/ratings", user_rating).then((response) => {
         console.log(response.data);
+        this.$router.go();
       });
     },
   },
@@ -54,18 +57,19 @@ export default {
             <p>{{ location.city }}, {{ location.state }}</p>
             <div v-for="rating in location.ratings" v-bind:key="rating.id">User Rating: {{ rating.rating }}</div>
             <div class="rate">
-              <input v-on:click="createRating(location, 5)" type="radio" id="star5" name="rate" value="5" />
-              <label for="star5" title="text">5 stars</label>
-              <input v-on:click="createRating(location, 4)" type="radio" id="star4" name="rate" value="4" />
-              <label for="star4" title="text">4 stars</label>
-              <input v-on:click="createRating(location, 3)" type="radio" id="star3" name="rate" value="3" />
-              <label for="star3" title="text">3 stars</label>
-              <input v-on:click="createRating(location, 2)" type="radio" id="star2" name="rate" value="2" />
-              <label for="star2" title="text">2 stars</label>
-              <input v-on:click="createRating(location, 1)" type="radio" id="star1" name="rate" value="1" />
-              <label for="star1" title="text">1 star</label>
+              <input type="radio" v-model="myRating" v-bind:id="'star5' + location.id" name="rate" value="5" />
+              <label v-bind:for="'star5' + location.id" title="text">5 stars</label>
+              <input type="radio" v-model="myRating" v-bind:id="'star4' + location.id" name="rate" value="4" />
+              <label v-bind:for="'star4' + location.id" title="text">4 stars</label>
+              <input type="radio" v-model="myRating" v-bind:id="'star3' + location.id" name="rate" value="3" />
+              <label v-bind:for="'star3' + location.id" title="text">3 stars</label>
+              <input type="radio" v-model="myRating" v-bind:id="'star2' + location.id" name="rate" value="2" />
+              <label v-bind:for="'star2' + location.id" title="text">2 stars</label>
+              <input type="radio" v-model="myRating" v-bind:id="'star1' + location.id" name="rate" value="1" />
+              <label v-bind:for="'star1' + location.id" title="text">1 star</label>
             </div>
             <a v-bind:href="`/locations/${location.id}`" class="btn btn-primary">More Info</a>
+            <button v-on:click="createRating(location)" class="btn btn-secondary">Rate Location</button>
           </div>
         </div>
       </div>

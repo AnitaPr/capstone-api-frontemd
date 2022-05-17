@@ -360,14 +360,14 @@ form.example input[type="text"] {
   font-size: 17px;
   border: 1px solid grey;
   float: left;
-  width: 40%;
+  margin-left: 80px;
+  width: 65%;
   background: #f1f1f1;
 }
 
 /* Style the submit button */
 form.example button {
   float: left;
-  margin-left: 200px;
   width: 10%;
   padding: 10px;
   background: #b8b8b8;
@@ -401,22 +401,22 @@ form.example::after {
 }
 .button1 {
   background-color: #b8b8b8;
-  margin-left: 200px;
-  width: 50%;
+  margin-left: 80px;
+  width: 80%;
 }
 .button2 {
   background-color: #b8b8b8;
-  margin-left: 200px;
-  width: 50%;
+  margin-left: 80px;
+  width: 80%;
 }
 .button3 {
   background-color: #b8b8b8;
-  margin-left: 200px;
-  width: 50%;
+  margin-left: 80px;
+  width: 80%;
 }
 .button4 {
   background-color: #b8b8b8;
-  margin-left: 200px;
-  width: 50%;
+  margin-left: 80px;
+  width: 80%;
 }
 </style>

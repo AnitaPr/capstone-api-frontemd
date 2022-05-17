@@ -25,11 +25,14 @@ export default {
 </script>
 
 <template>
-  <form action="action_page.php" style="border: 1px solid #ccc">
+  <form action="/action_page.php" style="border: 1px solid #ccc">
     <div class="container">
+      <form v-on:submit.prevent="submit()"></form>
       <h1>Sign Up</h1>
       <p>Please fill in this form to create an account.</p>
       <hr />
+      <label for="name"><b>Name</b></label>
+      <input type="text" v-model="newUserParams.name" placeholder="Enter Name" name="name" required />
 
       <label for="email"><b>Email</b></label>
       <input type="text" v-model="newUserParams.email" placeholder="Enter Email" name="email" required />
