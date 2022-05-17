@@ -12,16 +12,19 @@
             <input type="text" v-model="searchText" placeholder="Search.." name="search" />
             <button type="submit"><i class="fa fa-search"></i></button>
           </form>
-          <!-- |
-          <form class="example" action="action_page.php">
-            <input type="text" placeholder="Search.." name="search" />
-            <button type="submit"><i class="fa fa-search"></i></button>
-          </form>
-          |
-          <form class="example" action="action_page.php">
-            <input type="text" placeholder="Search.." name="search" />
-            <button type="submit"><i class="fa fa-search"></i></button>
-          </form> -->
+          <h1></h1>
+          <router-link v-bind:to="`/location/1`">
+            <button class="button button1">HOTELS</button>
+          </router-link>
+          <router-link v-bind:to="`/location/3`">
+            <button class="button button1">MUSEUMS</button>
+          </router-link>
+          <router-link v-bind:to="`/location/4`">
+            <button class="button button3" onclick="">RESTAURANTS</button>
+          </router-link>
+          <router-link v-bind:to="`/location/5`">
+            <button class="button button4" onclick="">WATERPARKS</button>
+          </router-link>
         </div>
         <div>
           <!-- <div v-for="place in places" v-bind:key="place.id">
@@ -138,8 +141,6 @@
               </a>
               <div class="post-meta">
                 <span class="date"></span>
-                <span class="mx-2">&bullet;</span>
-                <span>Jul 5th '22</span>
               </div>
               <h2><a href="">The Most Rated Kid Friendly Resort in the US</a></h2>
               <p class="mb-4 d-block">
@@ -159,18 +160,21 @@
           </div>
 
           <div class="col-lg-8">
-            <div class="row g-5">
-              <div class="col-lg-4 border-start custom-border">
+            <div class="row g-10">
+              <div class="col-lg-6 border-start custom-border">
                 <div class="post-entry-1">
                   <a href="single-post.html">
                     <img src="assets/img/child back cover.jpeg" alt="" class="img-fluid" />
                   </a>
                   <div class="post-meta">
                     <span class="date"></span>
-                    <span class="mx-1">&bullet;</span>
-                    <span>Jul 5th '22</span>
                   </div>
                   <h2><a href="single-post.html">Tips and Tricks for Traveling with Kids</a></h2>
+                  <p class="mb-4 d-block">
+                    One of the handy little gadgets that kept me sane during airport time was the Go-Go Babyz
+                    Travelmate, which has an extendable handle and wheels just like a carry-on suitcase and lets you
+                    strap your car seat directly to it.
+                  </p>
                 </div>
                 <div class="post-entry-1">
                   <a href="single-post.html">
@@ -178,42 +182,53 @@
                   </a>
                   <div class="post-meta">
                     <span class="date"></span>
-                    <span class="mx-1">&bullet;</span>
-                    <span>Jul 17th '22</span>
                   </div>
                   <h2>
-                    <a href="single-post.html">Best Car Travel Toys for Toddlers</a>
+                    <h2><a href="single-post.html">Best Car Travel Toys for Toddlers</a></h2>
+                    <p>
+                      Are you planning a road trip with your toddler? Road trips with toddlers are simpler and less
+                      stressful than flying with toddlers.
+                    </p>
                   </h2>
                 </div>
               </div>
-              <div class="col-lg-4 border-start custom-border">
+              <div class="col-lg-6 border-start custom-border">
                 <div class="post-entry-1">
                   <a href="single-post.html">
                     <img src="/assets/img/best museum.png" alt="" class="img-fluid" />
                   </a>
                   <div class="post-meta">
                     <span class="date"></span>
-                    <span class="mx-1">&bullet;</span>
-                    <span>Jul 5th '22</span>
                   </div>
-                  <h2><a href="single-post.html">The 15 Best Children's Museums in the US</a></h2>
+                  <h2><a href="single-post.html">The Best Children's Museums in the US</a></h2>
+                  <p>
+                    The best children's museums in the country feature interactive exhibits where kids want to linger,
+                    playing is encouraged, and learning is a byproduct of the fun.
+                  </p>
                 </div>
+
                 <div class="post-entry-1">
                   <a href="single-post.html">
                     <img src="/assets/img/amusement park.jpeg" alt="" class="img-fluid" />
                   </a>
                   <div class="post-meta">
                     <span class="date"></span>
-                    <span class="mx-1">&bullet;</span>
-                    <span>Mar 1st '22</span>
                   </div>
                   <h2><a href="single-post.html">Toddler-Friendly Theme Parks</a></h2>
+                  <p>
+                    An amusement park will be the perfect spot to visit once quarantine is over, to let your kids blow
+                    off some of that steam that has been building. Roller coaster rides and winding waterslides are a
+                    major thrill for big kids. When it comes to sites that offer an admirable range of attractions
+                    geared toward young children with less bravado and shorter stamina, however, some theme parks really
+                    stand out.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <!-- End .row -->
     </section>
     <!-- End Post Grid Section -->
@@ -322,6 +337,7 @@ body {
 #map {
   height: 500px;
   width: 800px;
+  margin-left: 80px;
 }
 #marker {
   background-image: url("");
@@ -332,7 +348,7 @@ body {
   cursor: pointer;
 }
 .mapboxgl-popup {
-  max-width: 200px;
+  max-width: 150px;
 }
  {
   box-sizing: border-box;
@@ -344,16 +360,17 @@ form.example input[type="text"] {
   font-size: 17px;
   border: 1px solid grey;
   float: left;
-  width: 50%;
+  width: 40%;
   background: #f1f1f1;
 }
 
 /* Style the submit button */
 form.example button {
   float: left;
+  margin-left: 200px;
   width: 10%;
   padding: 10px;
-  background: #008000;
+  background: #b8b8b8;
   color: white;
   font-size: 17px;
   border: 1px solid grey;
@@ -370,5 +387,36 @@ form.example::after {
   content: "";
   clear: both;
   display: table;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button1 {
+  background-color: #b8b8b8;
+  margin-left: 200px;
+  width: 50%;
+}
+.button2 {
+  background-color: #b8b8b8;
+  margin-left: 200px;
+  width: 50%;
+}
+.button3 {
+  background-color: #b8b8b8;
+  margin-left: 200px;
+  width: 50%;
+}
+.button4 {
+  background-color: #b8b8b8;
+  margin-left: 200px;
+  width: 50%;
 }
 </style>

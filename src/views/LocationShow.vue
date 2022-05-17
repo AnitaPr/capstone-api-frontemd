@@ -7,14 +7,14 @@ export default {
     };
   },
   created: function () {
-    axios.get(`/locations/${this.location.id}`).then((response) => {
+    axios.get(`/locations/${this.location.type_id}`).then((response) => {
       console.log(response);
       this.location = response.data;
     });
   },
   methods: {
     destroyLocation() {
-      axios.delete(`/locations/${this.location.id}`).then((response) => {
+      axios.delete(`/locations/${this.location.type_id}`).then((response) => {
         console.log(response);
         this.$router.push("/location");
       });
