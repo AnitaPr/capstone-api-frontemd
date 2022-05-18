@@ -25,9 +25,8 @@ export default {
 </script>
 
 <template>
-  <form action="/action_page.php" style="border: 1px solid #ccc">
-    <div class="container">
-      <form v-on:submit.prevent="submit()"></form>
+  <div class="container">
+    <form v-on:submit.prevent="submit()">
       <h1>Sign Up</h1>
       <p>Please fill in this form to create an account.</p>
       <hr />
@@ -56,10 +55,10 @@ export default {
 
       <div class="clearfix">
         <button type="button" class="cancelbtn">Cancel</button>
-        <button type="submit" class="signupbtn">Sign Up</button>
+        <button type="submit" value="submit" class="signupbtn">Sign Up</button>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
   <!-- <div class="signup">
     <form v-on:submit.prevent="submit()">
       <h1>Signup</h1>

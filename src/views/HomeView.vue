@@ -350,9 +350,9 @@ body {
 .mapboxgl-popup {
   max-width: 150px;
 }
- {
+/* {
   box-sizing: border-box;
-}
+} */
 
 /* Style the search field */
 form.example input[type="text"] {
@@ -360,15 +360,14 @@ form.example input[type="text"] {
   font-size: 17px;
   border: 1px solid grey;
   float: left;
-  margin-left: 80px;
-  width: 65%;
+  margin-right: 0px;
+  width: 60%;
   background: #f1f1f1;
 }
 
 /* Style the submit button */
 form.example button {
-  float: left;
-  width: 10%;
+  width: 20%;
   padding: 10px;
   background: #b8b8b8;
   color: white;
@@ -391,7 +390,7 @@ form.example::after {
 .button {
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 20px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;

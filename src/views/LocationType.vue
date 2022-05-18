@@ -68,8 +68,8 @@ export default {
               <input type="radio" v-model="myRating" v-bind:id="'star1' + location.id" name="rate" value="1" />
               <label v-bind:for="'star1' + location.id" title="text">1 star</label>
             </div>
-            <a v-bind:href="`/locations/${location.id}`" class="btn btn-primary">More Info</a>
-            <button v-on:click="createRating(location)" class="btn btn-secondary">Rate Location</button>
+            <button v-bind:href="`/locations/${location.id}`" class="button">More Info</button>
+            <button v-on:click="createRating(location)" class="button1">Rate Location</button>
           </div>
         </div>
       </div>
@@ -92,10 +92,10 @@ export default {
   width: 25%;
   padding: 0 10px;
 }
- {
+/* {
   margin: 0;
   padding: 0;
-}
+} */
 .rate {
   float: left;
   height: 46px;
@@ -130,5 +130,32 @@ export default {
 .rate > input:checked ~ label:hover ~ label,
 .rate > label:hover ~ input:checked ~ label {
   color: #c59b08;
+}
+.button {
+  border: none;
+  color: white;
+  background-color: #b8b8b8;
+  padding: 20px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 3px 1px;
+  cursor: pointer;
+  width: 80%;
+}
+
+.button1 {
+  border: none;
+  color: white;
+  background-color: #b8b8b8;
+  padding: 20px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 3px 1px;
+  cursor: pointer;
+  width: 80%;
 }
 </style>
