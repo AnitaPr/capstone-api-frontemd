@@ -110,6 +110,7 @@
 .header {
   padding: 5px;
 }
+
 .content {
   padding: 80px;
 }

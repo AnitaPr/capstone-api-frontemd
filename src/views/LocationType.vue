@@ -41,7 +41,12 @@ export default {
       <meta charset="UTF-8" />
       <link rel="stylesheet" type="text/css" href="style.css" />
       <title>Star rating using pure CSS</title>
-      <h1>All Locations</h1>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <!-- Font Awesome Icon Library -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
       <div
         class="col"
         v-bind:class="{ selected: location === currentLocation }"
@@ -68,8 +73,6 @@ export default {
               <input type="radio" v-model="myRating" v-bind:id="'star1' + location.id" name="rate" value="1" />
               <label v-bind:for="'star1' + location.id" title="text">1 star</label>
             </div>
-            <button v-bind:href="`/locations/${location.id}`" class="button">More Info</button>
-            <button v-on:click="createRating(location)" class="button1">Rate Location</button>
           </div>
         </div>
       </div>
@@ -92,10 +95,6 @@ export default {
   width: 25%;
   padding: 0 10px;
 }
-/* {
-  margin: 0;
-  padding: 0;
-} */
 .rate {
   float: left;
   height: 46px;
