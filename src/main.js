@@ -4,7 +4,8 @@ import App from "./App.vue";
 import router from "./router";
 import axios from "axios";
 
-axios.defaults.baseURL = process.env.NODE_ENV === "development" ? "http://localhost:3000" : "/";
+axios.defaults.baseURL =
+  process.env.NODE_ENV === "development" ? "http://localhost:3000" : "https://vast-temple-18361.herokuapp.com";
 
 var jwt = localStorage.getItem("jwt");
 if (jwt) {
