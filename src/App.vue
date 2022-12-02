@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>Neverland</title>
+    <title>Adventureland</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
@@ -94,7 +94,7 @@
       <div class="container">
         <div class="copyright">
           © Copyright
-          <strong><span>Neverland</span></strong>
+          <strong><span>Adventureland</span></strong>
           . All Rights Reserved
         </div>
 
