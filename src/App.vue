@@ -38,7 +38,7 @@
     <header id="header" class="header fixed-top">
       <div class="container container-xl d-flex align-items-center justify-content-between">
         <a href="/home" class="logo d-flex align-items-center">
-          <h1>Neverland</h1>
+          <h1>Adventureland</h1>
         </a>
 
         <nav id="navbar" class="navbar">
